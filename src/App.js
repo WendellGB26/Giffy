@@ -1,23 +1,35 @@
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ListOfGifs from './components/ListOfGif/ListOfGifs';
+import Home from './Pages/Home/Index'
+import Logo from "./Logo.png"
+import SearchGif from './Pages/SearchGif/Index';
+
+import { Link, Route } from "wouter";
+import GifInformation from './Pages/GifInformation/Index';
+
+
 
 function App() {
+  const [keyword,setKeyword] = useState ([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-content">
+        <div>
+        <Link to ="/">
+        <img className="Logo" src={Logo}/>
+        </Link>
+        </div>
+        <section className="App-link row text-center">
+          <Route 
+              component={Home}
+              path="/"
+          />
+          <Route 
+            component={SearchGif}
+            path="/gif/:keyword"
+          />
+        </section>
     </div>
   );
 }
