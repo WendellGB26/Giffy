@@ -6,11 +6,11 @@ import SearchGif from '../../Pages/SearchGif/Index';
 
 export default function Gif ({title, url, id}){
     return<>
-        <section className="col-6">
-            <a href= {`/${title}${id}`} className="Gif-link Gif">
+        <section className="col-4">
+            <Link href= {`/${title}/${id}`} className="Gif-link Gif">
                 <h4>{title}</h4>
                 <img loading='lazy' alt={title} src={url} />
-            </a>
+            </Link>
         </section>
     </>
 }

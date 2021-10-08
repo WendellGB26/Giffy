@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ListOfGifs from './components/ListOfGif/ListOfGifs';
+import ListOfGifs from './components/ListOfGif/Index';
 import Home from './Pages/Home/Index'
 import Logo from "./Logo.png"
 import SearchGif from './Pages/SearchGif/Index';
@@ -20,7 +20,7 @@ function App() {
         <img className="Logo" src={Logo}/>
         </Link>
         </div>
-        <section className="App-link row text-center">
+        <section className="App-link text-center">
           <Route 
               component={Home}
               path="/"

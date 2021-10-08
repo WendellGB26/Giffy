@@ -2,7 +2,7 @@ import react,{useEffect,useState} from "react";
 import Gif from "../../components/Gif/Gif";
 import getGifs from "../../components/GetGif/getGifs"
 import "../../App.css"
-import ListOfGifs from "../../components/ListOfGif/ListOfGifs";
+import ListOfGifs from "../../components/ListOfGif/Index";
 
 import { Link, Route } from "wouter";
 

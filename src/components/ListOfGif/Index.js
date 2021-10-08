@@ -2,6 +2,7 @@ import react,{useEffect,useState} from "react";
 import Gif from "../Gif/Gif";
 import getGifs from "../GetGif/getGifs"
 import "../../App.css"
+import "./Style.css"
 
 export default function ListOfGifs ({gifs}){    
     return <div className="row">

@@ -1,3 +1,3 @@
-export default function GifInformation ({id}){
+export default function GifInformation (){
     <p>Hola</p>
 }

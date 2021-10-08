@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import '../../App.css';
-import ListOfGifs from '../../components/ListOfGif/ListOfGifs';
+import ListOfGifs from '../../components/ListOfGif/Index';
 import './Home.css'
 import { Link, Route,useLocation } from "wouter";
 
