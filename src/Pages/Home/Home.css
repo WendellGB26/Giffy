@@ -1,0 +1,14 @@
+.Button{
+    width: 100px;
+    height: 80%;
+    align-items: center;
+}
+
+.App-title{
+    margin: 40px;
+    align-items: center;
+}
+
+.Last-Search{
+    pointer-events: none !important;
+}
