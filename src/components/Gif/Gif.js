@@ -8,8 +8,8 @@ export default function Gif ({title, url, id}){
     return<>
         <section className="col-4">
             <Link href= {`gif/${id}`} className="Gif-link Gif">
-                <h4>{title}</h4>
                 <img loading='lazy' alt={title} src={url} />
+                <h4>{title}</h4>
             </Link>
         </section>
     </>
