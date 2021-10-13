@@ -2,6 +2,7 @@ import React from "react";
 import Gif from '../../components/Gif/Gif'
 import './GifInformation.css'
 import useGlobalGif from "../../components/hooks/useGlobalGif";
+import '../../Layouts/Gif.css'
 
 export default function GifInformation ({params}){
     const gifs = useGlobalGif()

@@ -1,6 +1,6 @@
 import react,{useEffect,useState} from "react";
 import Gif from "../../components/Gif/Gif";
-import getGifs from "../../components/GetGif/getGifs"
+import getGifs from "../../services/GetGif/getGifs"
 import "../../App.css"
 import ListOfGifs from "../../components/ListOfGif/Index";
 import { useGifs } from "../../components/hooks/useGifs";

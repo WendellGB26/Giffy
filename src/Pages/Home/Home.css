@@ -12,3 +12,8 @@
 .Last-Search{
     pointer-events: none !important;
 }
+.Popular-Links{
+    margin: 20px;
+    text-align:left !important;
+    text-decoration: none !important;
+}

@@ -1,5 +1,5 @@
 import React,{useContext, useState, useEffect} from "react";
-import getGifs from "../GetGif/getGifs";
+import getGifs from "../../services/GetGif/getGifs";
 import GifContext from "../../context/GifContext";
 
 export function useGifs({keyword} = {keyword : null}){
