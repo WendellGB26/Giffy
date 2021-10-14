@@ -1,7 +1,7 @@
 import {API_KEY,NUM_GIFS} from '../Settings'
 
-export default function getGifs ({keyword = 'Rick'} = {}) {
-   const apiUrl =  `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${NUM_GIFS}&offset=0&rating=g&lang=en`
+export default function getGifs ({page = 0,keyword = 'Rick'} = {}) {
+   let apiUrl =  `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${NUM_GIFS}&offset=${page*NUM_GIFS}&rating=g&lang=en`
    return fetch(apiUrl)
         .then(res => res.json())
         .then(response => {

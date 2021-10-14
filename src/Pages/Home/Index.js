@@ -8,8 +8,6 @@ import { useGifs } from '../../components/hooks/useGifs';
 import TrendingSearchPopular from '../../components/TrendingSearch/Popular';
 import TrendingSearchPets from '../../components/TrendingSearch/Pets';
 
-
-
 export default function Home (){
     const [keyword,setKeyword] = useState ('')
     const [path,pushLocation] = useLocation()
