@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useCallback} from 'react';
 import '../../App.css';
 import ListOfGifs from '../../components/ListOfGif/Index';
 import './Home.css'
@@ -7,27 +7,20 @@ import { Link, Route,useLocation } from "wouter";
 import { useGifs } from '../../components/hooks/useGifs';
 import TrendingSearchPopular from '../../components/TrendingSearch/Popular';
 import TrendingSearchPets from '../../components/TrendingSearch/Pets';
+import SearchForm from '../../components/SearchForm/Index';
 
 export default function Home (){
-    const [keyword,setKeyword] = useState ('')
+    
     const [path,pushLocation] = useLocation()
     const {loading,gifs} = useGifs([])
     
-    const handleSubmit = evt =>{
-        evt.preventDefault()
+    const handleSubmit = useCallback(({ keyword }) =>{
         pushLocation(`/gif/${keyword}`)
-    }
-
-    const handleChange = evt =>{
-        setKeyword(evt.target.value)
-    }
+    }, [pushLocation])
     
     return(
         <>
-            <form onSubmit={handleSubmit}>
-                <input placeholder='Search the gif...' onChange={handleChange} type='text' value={keyword}></input>
-                <button onClick={handleChange} value={keyword}>Search</button>
-            </form>
+            <SearchForm handleSubmit={handleSubmit} />
             <div className = "container-fluid">
                 <div className = "row">
                     <div className = "col-md-8">

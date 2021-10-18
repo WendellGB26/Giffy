@@ -15,12 +15,6 @@
   background-color: gray;
 }
 
-.Gif img {
-  object-fit: contain;
-  width: 300px !important;
-  height: 100%;
-}
-
 .Gif-link {
   color: #000;
   display: block;
@@ -31,4 +25,20 @@
 
 .Gif-Container{
   margin: 10px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .Gif img {
+    object-fit: contain;
+    width: 150px !important;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .Gif img {
+    object-fit: contain;
+    width: 300px !important;
+    height: 100%;
+  }
 }

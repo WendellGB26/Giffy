@@ -4,9 +4,9 @@ import '../../App.css'
 import { Link, Route } from "wouter";
 import SearchGif from '../../Pages/SearchGif/Index';
 
-export default function Gif ({title, url, id}){
+function Gif ({title, url, id}){
     return<>
-        <section className="col-4">
+        <section className="col-md">
             <Link href= {`gif/${id}`} className="Gif-link Gif Gif-Container">
                 <img loading='lazy' alt={title} src={url} />
                 <h4>{title}</h4>
@@ -14,3 +14,7 @@ export default function Gif ({title, url, id}){
         </section>
     </>
 }
+
+export default React.memo(Gif,(prevPorps, nextProps)=>{
+    return prevPorps.id == nextProps.id 
+})
