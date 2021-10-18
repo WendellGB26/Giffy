@@ -23,7 +23,7 @@ export default function Home (){
             <SearchForm handleSubmit={handleSubmit} />
             <div className = "container-fluid">
                 <div className = "row">
-                    <div className = "col-md-8">
+                    <div className = "col-md">
                         <div className = "Last-Search">
                             <h3 className='App-title'>Ultima Busqueda</h3>
                             <ListOfGifs gifs={gifs} />
