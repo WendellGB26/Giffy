@@ -34,7 +34,7 @@ export default function Home (){
                     </div>
                     <div className = "col-md-4">
                         <div className="Popular-Links">
-                            <h3 className='App-title'>Los GIFS mas populares</h3>
+                            <h3 className='App-title'>Los GIFS mas Populares</h3>
                             <TrendingSearchPopular/>
 
                             <h3 className='App-title'>GIFS de Mascotas</h3>
