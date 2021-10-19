@@ -1,6 +1,9 @@
 import {API_KEY,NUM_GIFS} from '../Settings'
 
-export default function getGifs ({page = 0,keyword = 'Rick'} = {}) {
+export default function getGifs ({page = 0,keyword}) {
+    if(keyword == 'undefined'){
+        keyword=''
+    }
    let apiUrl =  `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${NUM_GIFS}&offset=${page*NUM_GIFS}&rating=g&lang=en`
    return fetch(apiUrl)
         .then(res => res.json())

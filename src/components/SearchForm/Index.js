@@ -3,7 +3,6 @@ import React,{ useState } from 'react';
 function SearchForm ({ handleSubmit : handleSubmitFromParent}) {
     const [keyword,setKeyword] = useState ('')
 
-
     const handleSubmit = evt =>{
         evt.preventDefault()
         handleSubmitFromParent({ keyword })
