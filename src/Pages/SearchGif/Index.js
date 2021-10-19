@@ -7,10 +7,13 @@ import { useGifs } from "../../components/hooks/useGifs";
 import debounce from "just-debounce-it";
 import { Link, Route } from "wouter";
 import useNearScreen from "../../components/hooks/useNearScreen";
+import useTitle from "../../components/hooks/useTitle";
 
 export default function SearchGif ({params}){
     const { keyword } = params
     const { loading, gifs, setPage } = useGifs({ keyword })
+
+    useTitle({title: `Giffy | Search= ${keyword}`})
     
     const externalRef = useRef()
     const {isNearScreen} = useNearScreen({

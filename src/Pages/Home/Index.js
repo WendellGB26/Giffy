@@ -8,12 +8,15 @@ import { useGifs } from '../../components/hooks/useGifs';
 import TrendingSearchPopular from '../../components/TrendingSearch/Popular';
 import TrendingSearchPets from '../../components/TrendingSearch/Pets';
 import SearchForm from '../../components/SearchForm/Index';
+import useTitle from '../../components/hooks/useTitle';
 
 export default function Home (){
     
     const [path,pushLocation] = useLocation()
     const {loading,gifs} = useGifs([])
     
+    useTitle({title: `Giffy | Home`})
+
     const handleSubmit = useCallback(({ keyword }) =>{
         pushLocation(`/gif/${keyword}`)
     }, [pushLocation])
