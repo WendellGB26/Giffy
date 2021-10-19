@@ -37,7 +37,7 @@ export default function Home (){
                             <h3 className='App-title'>Los GIFS mas populares</h3>
                             <TrendingSearchPopular/>
 
-                            <h3 className='App-title'>GIFS de mascotas</h3>
+                            <h3 className='App-title'>GIFS de Mascotas</h3>
                             <TrendingSearchPets/>
                         </div>
                     </div>
